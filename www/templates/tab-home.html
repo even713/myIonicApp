@@ -1,0 +1,63 @@
+<!--Here add "hide-nav-bar" so that nav-bar won't appear-->
+<ion-view hide-nav-bar="true" class="home-view">
+  <!--<ion-header-bar align-title="left" class="bar-positive">-->
+    <!--<div class="buttons">-->
+      <!--<button class="button" ng-click="doSomething()">左侧按钮</button>-->
+    <!--</div>-->
+    <!--<h1 class="title">Title!</h1>-->
+    <!--<div class="buttons">-->
+      <!--<button class="button">右侧按钮</button>-->
+    <!--</div>-->
+  <!--</ion-header-bar>-->
+  <div class="bar bar-header item-input-inset">
+    <span class="jd-search-icon-logo"><i class="jd-sprite-icon"></i></span>
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search">
+    </label>
+  </div>
+
+  <!-- Below will be shown in the header -->
+  <!--<ion-nav-buttons side="left">-->
+    <!--<button class="button" ng-click="doSomething()">-->
+      <!--我是一个在导航栏左侧的按钮！-->
+    <!--</button>-->
+    <!--<input type="text" value="test"/>-->
+  <!--</ion-nav-buttons>-->
+
+  <ion-content class="padding">
+    <ion-slide-box>
+      <ion-slide>
+        <div class="box">
+          <img src="../assets/ad_1.jpg"/>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <img src="../assets/ad_2.jpg"/>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box">
+          <img src="../assets/ad_3.jpg"/>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <section class="jd-seckill">
+      <header>
+        <h4>京东秒杀</h4>
+        <a class="icon icon-right ion-chevron-right" href="#/tab/seckill">更多秒杀</a>
+      </header>
+      <ion-scroll direction="x" style="width: 100%">
+        <ul class="seckill-pro-list" ng-style="{width: seckillWidth}">
+          <seckill-pro-brief ng-repeat = "item in seckillList"
+            img-url="item.imgUrl"
+            price="item.price"
+            ></seckill-pro-brief>
+        </ul>
+      </ion-scroll>
+    </section>
+
+  </ion-content>
+</ion-view>

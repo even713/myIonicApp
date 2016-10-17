@@ -1,0 +1,28 @@
+<ion-view view-title="京东秒杀">
+  <ion-content class="padding seckill">
+    <section>
+      <div class="list">
+        <a class="item item-thumbnail-left" ng-repeat="item in seckillList" ui-sref="productDetail({productName:item.title})">
+          <img ng-src="{{item.imgUrl}}"/>
+          <h2>{{item.title}}</h2>
+          <div class="item-detail row">
+            <div class="col col-top col-25 price">{{item.price|currency}}</div>
+            <div class="col">
+              <button class="button button-assertive">
+                去秒杀
+              </button>
+              <div class="sold">
+                <progress max="100" value="{{item.sold}}"> </progress>
+                <span>已秒{{item.sold}}%</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <p>
+      <a class="button icon ion-home" href="#/tab/home"> Home</a>
+      <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">More Facts</a>
+    </p>
+  </ion-content>
+</ion-view>

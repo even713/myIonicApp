@@ -1,0 +1,9 @@
+{
+  "name": "myAppIonic",
+  "app_id": "",
+
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

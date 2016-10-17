@@ -1,0 +1,24 @@
+<ion-view class="product-detail">
+  <ion-nav-buttons side="left">
+    <ng-include src="'templates/product-detail-tabs.html'"></ng-include>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+    {{productName}}
+    <p>
+      <a class="button icon ion-home" href="#/tab/home"> Home</a>
+      <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">More Facts</a>
+    </p>
+
+
+  </ion-content>
+
+  <ion-footer-bar align-title="right" class="">
+    <div class="buttons">
+      <span class="ion-ios-cart-outline"></span>
+    </div>
+    <div class="buttons" ng-click="doSomething()">
+      <button class="button">加入购物车</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
