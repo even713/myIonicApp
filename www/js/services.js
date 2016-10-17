@@ -1,50 +1,70 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Types', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
+  var types = [{
+    name: '母婴童装',
+    subTypes: [
+      {name: '奶粉', products: [
+        {name: "惠氏1段", imgUrl: ""},
+        {name: "惠氏2段", imgUrl: ""},
+        {name: "惠氏3段", imgUrl: ""}
+      ]},
+
+      {name: "尿布", products: [
+        {name: "大王L", imgUrl: ""},
+        {name: "大王XL", imgUrl: ""},
+        {name: "大王XXL", imgUrl: ""}
+      ]}
+    ]
+
   }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    name: '图书',
+    subTypes: [
+      {name: '英语读物', products: [
+        {name: "了不起的盖茨比", imgUrl: ""},
+        {name: "迪士尼大电影", imgUrl: ""},
+        {name: "傲慢与偏见", imgUrl: ""}
+      ]},
+
+      {name: "绘本", products: [
+        {name: "不一样的卡梅拉", imgUrl: ""},
+        {name: "小王子", imgUrl: ""},
+        {name: "小熊宝宝", imgUrl: ""}
+      ]}
+    ]
+
   }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
+    name: '个护化妆',
+    subTypes: [
+      {name: '化妆1', products: [
+        {name: "化妆品1", imgUrl: ""}
+      ]},
+
+      {name: "化妆2", products: [
+        {name: "化妆品2", imgUrl: ""}
+      ]}
+    ]
+
   }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
+    name: '手机数码',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+
   }];
 
   return {
     all: function() {
-      return chats;
-    },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
-    },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
-        }
-      }
-      return null;
+      return types;
     }
   };
 });

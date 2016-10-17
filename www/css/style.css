@@ -109,6 +109,23 @@
 }
 /* end Product detail view */
 
+/* types view */
+.types-view .list{
+  float: left;
+  width: 90px;
+  border: 1px solid red;
+}
+
+.types-view .list .item{
+  font-size: 1em;
+}
+
+.types-view ion-scroll{
+  margin-left: 90px;
+  border: 1px solid blue;
+}
+/* end types view */
+
 /* Make progress bar works in mobile mode*/
 progress {
   display: block;

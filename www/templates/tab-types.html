@@ -1,0 +1,26 @@
+<ion-view class="types-view">
+  <ion-nav-buttons side="hello">
+    <label class="item item-input types-view">
+      <input type="text" placeholder="航天盛举，飞亚达陪您一同见证" size="28"/>
+    </label>
+  </ion-nav-buttons>
+  <ion-content>
+    <ul class="list">
+      <li class="item" ng-repeat="type in types" ng-click="onTypeClick(type)">
+        {{type.name}}
+      </li>
+    </ul>
+    <div class="detail">
+      <ion-scroll direction="y">
+        <div class="sub-type" ng-repeat="subType in curType.subTypes">
+          <h4>{{subType.name}}</h4>
+          <ul>
+            <li ng-repeat="product in subType.products">
+              {{product.name}}
+            </li>
+          </ul>
+        </div>
+      </ion-scroll>
+    </div>
+  </ion-content>
+</ion-view>

@@ -71,7 +71,7 @@ angular.module('starter.controllers', [])
 
   })
 
-.controller('ChatsCtrl', function($scope, Chats, $ionicNavBarDelegate) {
+.controller('TypesCtrl', function($scope, Types) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -80,10 +80,19 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+
+    $scope.$on('$ionicView.beforeEnter', function (event, viewData) {
+      viewData.enableBack = true;
+    });
+
+    $scope.types = Types.all();
+
+    $scope.curType;
+
+    $scope.onTypeClick = function (typeInfo) {
+      $scope.curType = typeInfo;
+
+    }
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
