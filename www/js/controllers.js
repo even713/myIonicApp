@@ -71,7 +71,7 @@ angular.module('starter.controllers', [])
 
   })
 
-.controller('TypesCtrl', function($scope, Types) {
+.controller('TypesCtrl', function($scope, Types, $window) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -87,12 +87,14 @@ angular.module('starter.controllers', [])
 
     $scope.types = Types.all();
 
-    $scope.curType;
+    $scope.curType = $scope.types[0];
 
     $scope.onTypeClick = function (typeInfo) {
       $scope.curType = typeInfo;
 
     }
+
+    $scope.iframeHeight = ($window.innerHeight - 44 - 47) + "px";
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

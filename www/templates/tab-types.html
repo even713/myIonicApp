@@ -5,18 +5,23 @@
     </label>
   </ion-nav-buttons>
   <ion-content>
-    <ul class="list">
-      <li class="item" ng-repeat="type in types" ng-click="onTypeClick(type)">
-        {{type.name}}
-      </li>
-    </ul>
+    <ion-scroll direction="y" class="type-list" ng-style="{height:iframeHeight}">
+      <ul class="list">
+        <li ng-class="['item', {active: curType.name == type.name}]" ng-repeat="type in types" ng-click="onTypeClick(type)">
+          {{type.name}}
+        </li>
+      </ul>
+    </ion-scroll>
     <div class="detail">
       <ion-scroll direction="y">
         <div class="sub-type" ng-repeat="subType in curType.subTypes">
           <h4>{{subType.name}}</h4>
-          <ul>
-            <li ng-repeat="product in subType.products">
-              {{product.name}}
+          <ul class="row">
+            <li ng-repeat="product in subType.products" class="col col-30">
+              <div>
+                <img ng-src="{{product.imgUrl}}" style="width: 100%"/>
+                <a ui-sref="productDetail({productName:product.name})">{{product.name}}</a>
+              </div>
             </li>
           </ul>
         </div>

@@ -8,15 +8,15 @@ angular.module('starter.services', [])
     name: '母婴童装',
     subTypes: [
       {name: '奶粉', products: [
-        {name: "惠氏1段", imgUrl: ""},
-        {name: "惠氏2段", imgUrl: ""},
-        {name: "惠氏3段", imgUrl: ""}
+        {name: "惠氏1段", imgUrl: "assets/seckill_1.jpg"},
+        {name: "惠氏2段", imgUrl: "assets/seckill_2.jpg"},
+        {name: "惠氏3段", imgUrl: "assets/seckill_3.jpg"}
       ]},
 
       {name: "尿布", products: [
-        {name: "大王L", imgUrl: ""},
-        {name: "大王XL", imgUrl: ""},
-        {name: "大王XXL", imgUrl: ""}
+        {name: "大王L", imgUrl: "assets/seckill_4.jpg"},
+        {name: "大王XL", imgUrl: "assets/seckill_5.jpg"},
+        {name: "大王XXL", imgUrl: "assets/seckill_6.jpg"}
       ]}
     ]
 
@@ -59,7 +59,138 @@ angular.module('starter.services', [])
         {name: "ThinkPad", imgUrl: ""}
       ]}
     ]
+  }, {
+    name: '家用电器',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
 
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '潮流女装',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '食品生鲜',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '品牌男孩',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '居家生活',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '酒水饮料',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '家具建材',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '钟表珠宝',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '玩具乐器',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '内衣配饰',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '汽车用品',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
+  }, {
+    name: '音像制品',
+    subTypes: [
+      {name: '手机', products: [
+        {name: "小米", imgUrl: ""}
+      ]},
+
+      {name: "电脑", products: [
+        {name: "ThinkPad", imgUrl: ""}
+      ]}
+    ]
   }];
 
   return {

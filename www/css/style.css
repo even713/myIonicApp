@@ -110,19 +110,20 @@
 /* end Product detail view */
 
 /* types view */
-.types-view .list{
+.types-view .type-list{
   float: left;
   width: 90px;
-  border: 1px solid red;
+  border-right: 1px solid grey;
 }
 
 .types-view .list .item{
   font-size: 1em;
 }
-
-.types-view ion-scroll{
+.types-view .list .item.active{
+  background-color: #eee;
+}
+.types-view .detail ion-scroll{
   margin-left: 90px;
-  border: 1px solid blue;
 }
 /* end types view */
 
